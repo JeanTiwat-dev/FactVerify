@@ -11,9 +11,25 @@ app.use(express.json());
 const logger = require("./middleware/logger");
 app.use(logger);
 
-app.get("/welcome", (req, res) => {
+
+function randomInt1_100() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
+app.post("/sendForm", async(req, res) => {
   console.log(req.body);
-  res.status(200).send("Welcome 🙌 ");
+
+  const data_result = {
+    consistency: randomInt1_100(),
+    adaptation:randomInt1_100(),
+    ambiguity:randomInt1_100(),
+    false_information:randomInt1_100(),
+    message:"it's reliable"
+  }
+
+  console.log(data_result);
+
+  res.status(200).json({result:{data_result}});
 });
 
 const port = `${process.env.PORT}`;
