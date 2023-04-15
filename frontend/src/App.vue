@@ -1,9 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav
+    class="bg-[#E14761] flex items-center justify-between py-2 w-full absolute"
+  >
+    <router-link to="/" class="text-2xl ml-12" style="color: white"
+      >FactVerify</router-link
+    >
+    <div class="flex justify-end space-x-10 items-center mr-8 text-lg">
+      <router-link to="/">Home</router-link>
+      <router-link to="/form">Form</router-link>
+      <router-link to="/about">About Us</router-link>
+    </div>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
@@ -21,10 +29,10 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #000;
 }
 </style>
