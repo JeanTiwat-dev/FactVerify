@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-[#020617] h-screen pt-12 px-40">
+  <div class="bg-[#1E1E1E] h-screen pt-12">
     <p class="text-6xl text-white py-6">Enter the news you want to check</p>
-    <div class="bg-[#E14761] rounded-3xl py-20">
+    <div class="bg-[#E14761] rounded-3xl py-20 w-[50%] mx-auto">
       <div class="flex items-center justify-center py-10">
         <div class="w-full">
           <div class="w-full mb-10">
