@@ -1,0 +1,13 @@
+services:
+  web:
+    build: ./frontend
+    image: tiwatdevv/img_frontend:lastest
+    ports:
+      - "7000:7000"
+    container_name: frontend
+  server:
+    build: ./backend
+    image: tiwatdevv/img_backend:lastest
+    ports:
+      - "4000:4000"
+    container_name: backend
