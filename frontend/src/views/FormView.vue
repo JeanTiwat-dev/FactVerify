@@ -68,9 +68,13 @@ export default {
       };
 
       axios
-        .post("http://localhost:5000/sendForm", data)
+        .post("http://localhost:4000/sendForm", data)
         .then((res) => {
-          console.log(res.data.result);
+          localStorage.setItem("result", JSON.stringify(res.data.result));
+          console.log(res.data);
+          this.$router.push({
+            path: "/result",
+          });
         })
         .catch((err) => {
           console.log(err);
